@@ -1,0 +1,60 @@
+.nav {
+  background-color: #f9f9fa;
+  padding: 20px 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__link {
+  color: #2e363e;
+  position: relative;
+}
+
+@keyframes notificationAnimation {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: none;
+  }
+  75% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.nav__notification {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  animation: notificationAnimation 2s ease-in-out infinite;
+}
+
+@keyframes appearBtnAnimation {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.nav__btn {
+  animation: appearBtnAnimation 0.5s ease-in-out;
+}
+.friends-body .nav__btn {
+  animation-delay: 1s;
+}
